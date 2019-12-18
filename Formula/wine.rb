@@ -9,7 +9,7 @@ class Wine < Formula
   homepage "https://www.winehq.org/"
   url "https://dl.winehq.org/wine/source/4.0/wine-4.0.2.tar.xz"
   mirror "https://downloads.sourceforge.net/project/wine/Source/wine-4.0.2.tar.xz"
-  sha256 "994050692f8417ee206daafa5fc0ff810cc9392ffda1786ac0f0fb0cf74dbd74"
+  #sha256 "994050692f8417ee206daafa5fc0ff810cc9392ffda1786ac0f0fb0cf74dbd74"
   head "https://source.winehq.org/git/wine.git"
 
   depends_on "cmake" => :build
@@ -240,6 +240,7 @@ class Wine < Formula
         ENV["SED"] = "sed" # prevent libtool from hardcoding sed path from superenv
         system "./configure", "--disable-dependency-tracking",
                               "--prefix=#{libexec}",
+                              "--enable-win64", # from https://stackoverflow.com/a/59110203/32453
                               "--disable-static",
                               "--program-prefix=g",
                               "--enable-ltdl-install"
