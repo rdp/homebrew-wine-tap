@@ -14,7 +14,7 @@ this tap source builds on mojave and below
 
 How to install:
 
-$ brew install rdp/homebrew_wine_tape/wine
+$ brew install rdp/homebrew-wine-tap/wine
 
 possibly on catalina?
 

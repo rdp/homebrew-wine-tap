@@ -12,10 +12,6 @@ class Wine < Formula
   sha256 "994050692f8417ee206daafa5fc0ff810cc9392ffda1786ac0f0fb0cf74dbd74"
   head "https://source.winehq.org/git/wine.git"
 
-  bottle do
-    sha256 "4105b551360afb40edf2c286cc7c6e0f723d62a0f273625c7e17c05b00d947f3" => :sierra
-  end
-
   depends_on "cmake" => :build
   depends_on "makedepend" => :build
 
